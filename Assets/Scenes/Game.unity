@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -146,6 +148,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1121fbd75f44f48901130849cbd255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gokyuzu: {fileID: 7615156042154670532, guid: bffbd8536206a9548ad6cbb63c2b8406, type: 3}
+  toprak: {fileID: 5026651376266897367, guid: 0ab12dcde8361964796f731df9013307, type: 3}
+  gokyuzuSagaKaymaHizi: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -203,6 +220,24 @@ Transform:
   m_Father: {fileID: 1213021877}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bfc61a3fb0f4384ebd33e841bbb9aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ustEngel: {fileID: 3990076927122788672, guid: 75646dd18adbf4847b982d7e882a624e,
+    type: 3}
+  altEngel: {fileID: 2871575128535178404, guid: e027b7960f58f684facc66f7ed7c353a,
+    type: 3}
+  altUstEngelArasiBosluk: 1.2
+  ikiEngelArasiMesafe: 2
 --- !u!1 &1213021876
 GameObject:
   m_ObjectHideFlags: 0
