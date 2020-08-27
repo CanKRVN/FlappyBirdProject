@@ -62,7 +62,12 @@ public class BirdMovement : MonoBehaviour
                 Destroy(Camera.main.GetComponent<BackGround>());
                 Destroy(GetComponent<BirdAnimation>());
                 yatayHiz = 0;
-                engeleCarptim = true;
+                if (!engeleCarptim)
+                {
+                    GetComponent<AudioSource>().PlayOneShot(olumSes);
+                    Invoke("DusmeSesiCal", 0.25f);
+                    engeleCarptim = true;
+                }  
             }
         }
         else
@@ -80,6 +85,12 @@ public class BirdMovement : MonoBehaviour
             PlayerPrefs.SetInt("YuksekSkor", yuksekSkor);
             PlayerPrefs.Save();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+            
     }
 
     void OnTriggerEnter2D(Collider2D temas)
