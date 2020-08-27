@@ -6,6 +6,7 @@ public class Obstacles : MonoBehaviour
 {
     public GameObject ustEngel;
     public GameObject altEngel;
+    public GameObject skorCollider;
 
     public float altUstEngelArasiBosluk = 0.8f;
     public float ikiEngelArasiMesafe = 2f;
@@ -37,6 +38,13 @@ public class Obstacles : MonoBehaviour
             float yKoordinati = Random.Range(-kameraUnityEbatlar.y + altUstEngelArasiBosluk + 0.6f, kameraUnityEbatlar.y - 0.6f);
             ustEngelObjeleri[i] = Instantiate(ustEngel, new Vector3(xKoordinati, yKoordinati, 0), Quaternion.identity).transform;
             altEngelObjeleri[i] = Instantiate(altEngel, new Vector3(xKoordinati, yKoordinati - altUstEngelArasiBosluk, 0), Quaternion.identity).transform;
+
+            EdgeCollider2D temasAlani = Instantiate(skorCollider, new Vector3(xKoordinati + engelUnityEbatlar.x / 2, kameraUnityEbatlar.y, 0), Quaternion.identity).GetComponent<EdgeCollider2D>();
+            Vector2[] cizgi = new Vector2[2];
+            cizgi[0] = new Vector2(0, 0);
+            cizgi[1] = new Vector2(0, -2 * kameraUnityEbatlar.y);
+            temasAlani.points = cizgi;
+            temasAlani.transform.SetParent(ustEngelObjeleri[i]);
         }
     }
 
